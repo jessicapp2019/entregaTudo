@@ -7,19 +7,20 @@ import { UsuarioService } from '../services/usuario.service';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-  protected quantServico:number = 0;
-  protected quantUsuario:number = 0;
-  protected quantEntrega:number = 0;
+protected quantUsuario:number = 0;
+protected quantEntrega:number = 0;
 
 
   constructor(
     protected usuarioService:UsuarioService
   ) {
     this.usuarioService.getAll().subscribe(
-      res =>{
+      res=>{
         this.quantUsuario = res.length
       }
-    )
+    );
+
+
   }
 
 }
